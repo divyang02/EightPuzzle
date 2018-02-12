@@ -142,5 +142,26 @@ public class Board {
     public static void main(String[] args) {
     	
     }
-
+    
+    public void printBoard() {
+    	for(int i = 0; i < this.dimension(); i++) {
+    		for(int j = 0; j < this.dimension(); j++) {
+    			System.out.print(this.blocks[i][j] + " ");
+    		}
+    		System.out.println("");
+    	}
+    	System.out.println("");
+    }
+    
+    public Integer[][] boardElements() {
+    	int n = this.blocks.length;
+    	Integer[][] r = new Integer[n][n];
+    	for(int i = 0; i < n; i++) {
+    		for(int j = 0; j < n; j++) {
+    			r[i][j] = this.blocks[i][j];
+    		}
+    	}
+    	return r;
+    }
+    
 }
