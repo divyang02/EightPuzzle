@@ -1,9 +1,5 @@
 package eightpuzzle;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -28,31 +24,6 @@ public class PuzzleChecker {
 	            Solver solver = new Solver(initial);
 	            StdOut.println(filename + ": " + solver.moves());
 	            System.out.println("");
-	            //Board fb = solver.solBoard();
-	            //fb.printBoard();
-	            Stack<Integer[][]> re = new Stack<>();
-	            for(Board b : solver.solution()) {
-	            	re.push(b.boardElements());
-	            }
-	            eigth_puz ei = new eigth_puz(re.pop());
-	            while(!re.isEmpty()) {
-	            	//Integer[][] b = re.pop();
-	            	/*for(int i = 0; i < b.length; i++) {
-	            		for(int j = 0; j < b.length; j++) {
-	            			System.out.print(b[i][j] + " ");
-	            		}
-	            		System.out.println();
-	            	}
-	            	System.out.println();*/
-	            	Integer[][] b = re.pop();
-	            	ei.reprint(b);
-	            	try{
-	            		Thread.sleep(1000);
-	            	}catch(Exception e){
-	            		
-	            	}
-	            }
-	            
 	        }
 	    }
 }
