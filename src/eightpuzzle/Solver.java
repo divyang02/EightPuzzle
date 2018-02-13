@@ -76,6 +76,10 @@ public class Solver {
     	}
     }
     
+    public Board solBoard() {
+    	return lastBoard.board;
+    }
+    
     public static void main(String[] args) {
     	
     }
